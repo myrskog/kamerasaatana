@@ -3,3 +3,8 @@ C:\Users\Atk3\Desktop\samples\UserInterface\Menu\obj\Debug\SimpleMenu.dll
 C:\Users\Atk3\Desktop\samples\UserInterface\Menu\obj\Debug\SimpleMenu.pdb
 C:\Users\Atk3\Desktop\samples\UserInterface\Menu\Bin\Debug\SimpleMenu.apk
 C:\Users\Atk3\Desktop\samples\UserInterface\Menu\Bin\Debug\SimpleMenu.d42map
+C:\Users\Atk3\kamerasaatana\Bin\Debug\SimpleMenu.apk
+C:\Users\Atk3\kamerasaatana\Bin\Debug\SimpleMenu.d42map
+C:\Users\Atk3\kamerasaatana\obj\Debug\SimpleMenu.csprojResolveAssemblyReference.cache
+C:\Users\Atk3\kamerasaatana\obj\Debug\SimpleMenu.dll
+C:\Users\Atk3\kamerasaatana\obj\Debug\SimpleMenu.pdb

@@ -40,6 +40,8 @@ namespace SimpleMenu
             public const int submenu = 0x7f04003b;
             
             public const int submenu_item1 = 0x7f04003c;
+            
+            public const int submenu_item2 = 0x7f04003d;
         }
         
         public sealed class Menus

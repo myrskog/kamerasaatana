@@ -22,20 +22,21 @@ namespace SimpleMenu
     public class MainActivity : Activity
     {
         private TextView tbLog;
+        private Camera camera = null;
 
         protected override void OnCreate(Bundle savedInstance)
         {
             base.OnCreate(savedInstance);
             SetContentView(R.Layouts.MainLayout);
             tbLog = FindViewById<TextView>(R.Ids.tbLog);
-            var camera = GetCamera();
-            var preview = FindViewById<FrameLayout>(R.Ids.preview);
+            camera = GetCamera();
             var captureButton = FindViewById<Button>(R.Ids.captureButton);
+            var preview = FindViewById<FrameLayout>(R.Ids.preview);
+            var cameraPreview = new CameraPreview(this, camera);
+            //preview.AddView(cameraPreview);
 
             if (camera != null)
             {
-                var cameraPreview = new CameraPreview(this, camera);
-                Camera.Parameters parameters = camera.GetParameters();
                 preview.AddView(cameraPreview);
                 camera.StartFaceDetection();
 
@@ -57,8 +58,7 @@ namespace SimpleMenu
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-
-            var camera = GetCamera();
+            Camera.Parameters parameters = camera.GetParameters();
 
             switch (item.GetItemId())
             {
@@ -69,7 +69,14 @@ namespace SimpleMenu
                     tbLog.Text = "groupItem1 has been clicked";
                     break;
                 case R.Ids.submenu_item1:
-                    tbLog.Text = "submenu_item1 has been clicked";
+                    tbLog.Text = "Negative has been clicked";
+                    parameters.SetColorEffect(Camera.Parameters.EFFECT_NEGATIVE);
+                    camera.SetParameters(parameters);
+                    break;
+                case R.Ids.submenu_item2:
+                    tbLog.Text = "None has been clicked";
+                    parameters.SetColorEffect(Camera.Parameters.EFFECT_NONE);
+                    camera.SetParameters(parameters);
                     break;
 
             }
